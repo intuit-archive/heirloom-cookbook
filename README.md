@@ -4,6 +4,8 @@ Installs the heirloom pacakage manager RPM.
 
 # Requirements
 
+Tested on Chef 10
+
 # Usage
 
 # Attributes

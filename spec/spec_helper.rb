@@ -15,9 +15,5 @@ Dir.entries(libs).each do |r|
 end
 
 RSpec.configure do |config|
-  def converge(recipe_name)
-    chef_run = ChefSpec::ChefRunner.new(:cookbook_path => File.dirname(__FILE__))
-    chef_run.coverge recipe_name
-    chef_run
-  end
+  # rspec config
 end

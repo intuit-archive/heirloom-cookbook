@@ -9,3 +9,5 @@ Gemfile.lock
 *.un~
 /cookbooks
 /vendor/cookbooks
+.kitchen/
+.kitchen.local.yml

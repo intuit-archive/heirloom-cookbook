@@ -4,6 +4,7 @@ gem 'berkshelf'
 
 group :test do
   gem 'rspec'
+  gem 'rake'
   gem 'chefspec'
   gem 'minitest-chef-handler'
   gem 'foodcritic'

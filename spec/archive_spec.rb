@@ -10,8 +10,7 @@ describe Archive do
       :cookbook_path => 'spec/support/cookbooks',
       :step_into     => ['heirloom-cookbook_archive']
     )
-    # If you want to see the chef log in the rspec output...
-    # Chef::Log.level = :debug
+    #Chef::Log.level = :debug
     runner.converge 'heirloom-tests::default'
   }
   

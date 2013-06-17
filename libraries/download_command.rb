@@ -3,6 +3,10 @@ class DownloadCommand
   def command(args)
     opts = []
 
+    unless args[:name] && args[:output]
+      raise ArgumentError, "Name and Output required"
+    end
+
     opts << "--aws_access_key #{args[:aws_access_key]}" if args[:aws_access_key]
     opts << "--aws_secret_key #{args[:aws_secret_key]}" if args[:aws_secret_key]
     opts << "-b #{args[:bucket_prefix]}"                if args[:bucket_prefix]

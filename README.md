@@ -1,6 +1,6 @@
 # heirloom-cookbook cookbook
 
-Installs the heirloom pacakage manager RPM.
+Installs the heirloom pacakage manager RPM and provides an LWRP for downloading heirlooms.
 
 # Requirements
 
@@ -8,13 +8,33 @@ Tested on Chef 10
 
 # Usage
 
-# Attributes
+## Attributes
 
-The following attributes are configurable currently: version, package_name
+The following attributes are configurable currently:
 
-# Recipes
+ * version
+ * package_name
 
-The default recipe installs the heirloom rpm package which contains the heirloom ruby gem and dependant gems.
+## Recipes
+
+The default recipe installs the heirloom rpm package which contains the heirloom ruby gem and dependent gems.
+
+## LWRP
+
+### heirloom\_cookbook\_archive
+
+Manages heirlooms - only supported action is download (the default).
+
+Example usage:
+
+    heirloom_cookbook_archive "my-heirloom-name" do
+      id "v1.1.1"
+      output "/tmp/heirloom"
+    end
+
+All heirloom options are supported - for a full list consult the heirloom documentation:
+
+    $ heirloom download -h
 
 # Author
 

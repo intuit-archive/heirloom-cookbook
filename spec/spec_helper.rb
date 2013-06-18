@@ -2,8 +2,9 @@ require 'rubygems'
 require 'bundler/setup'
 require 'berkshelf'
 
-# prevent recursive copies
-FileUtils.rm_rf 'vendor/cookbooks'
+# prevent recursive vendoring by berkshelf
+# https://github.com/RiotGames/berkshelf/issues/263
+FileUtils.rm_rf 'vendor/cookbooks/heirloom-cookbook'
 # install deps
 berksfile = Berkshelf::Berksfile.from_file('Berksfile')
 berksfile.install( :path => 'vendor/cookbooks')

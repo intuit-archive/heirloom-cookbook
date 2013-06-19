@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = 'cap-base'
 
   config.vm.provision :chef_solo do |chef|
-    chef.add_recipe "heirloom-cookbook::default"
+    chef.add_recipe "heirloom"
     chef.add_recipe "minitest-handler-cookbook"
   end
 end

@@ -8,7 +8,7 @@ describe Archive do
   let(:chef_run) {
     runner = ChefSpec::ChefRunner.new(
       :cookbook_path => 'spec/support/cookbooks',
-      :step_into     => ['heirloom-cookbook_archive']
+      :step_into     => ['heirloom_archive']
     )
     #Chef::Log.level = :debug
     runner.converge 'heirloom-tests::default'

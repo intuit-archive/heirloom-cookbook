@@ -1,1 +1,1 @@
-cookbook 'heirloom-cookbook', :path => '../../../../'
+cookbook 'heirloom', :path => '../../../../'

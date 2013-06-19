@@ -1,6 +1,5 @@
 require 'foodcritic'
 require 'rspec/core/rake_task'
-require 'chef/cookbook/metadata'
 
 task :default => [:foodcritic, :knife, :spec]
 
@@ -11,9 +10,7 @@ end
 
 desc "Run knife test"
 task :knife do
-  metadata = Chef::Cookbook::Metadata.new
-  metadata.from_file('metadata.rb')
-  sh "bundle exec knife cookbook test #{metadata.name} -c spec/.chef/knife.rb -o '..'"
+  sh "bundle exec knife cookbook test #{File.basename(File.dirname(__FILE__))} -c spec/.chef/knife.rb -o '..'"
 end
 
 desc 'Run specs'

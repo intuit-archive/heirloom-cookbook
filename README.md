@@ -1,4 +1,4 @@
-# heirloom-cookbook cookbook
+# heirloom cookbook
 
 Installs the heirloom pacakage manager RPM and provides an LWRP for downloading heirlooms.
 
@@ -21,13 +21,13 @@ The default recipe installs the heirloom rpm package which contains the heirloom
 
 ## LWRP
 
-### heirloom\_cookbook\_archive
+### heirloom\_archive
 
 Manages heirlooms - only supported action is download (the default).
 
 Example usage:
 
-    heirloom_cookbook_archive "my-heirloom-name" do
+    heirloom_archive "my-heirloom-name" do
       id "v1.1.1"
       output "/tmp/heirloom"
     end

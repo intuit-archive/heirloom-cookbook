@@ -1,6 +1,6 @@
 require 'minitest/spec'
 
-describe_recipe "heirloom-cookbook::default" do
+describe_recipe "heirloom" do
 
   include MiniTest::Chef::Assertions
   include MiniTest::Chef::Context

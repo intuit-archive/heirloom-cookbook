@@ -1,11 +1,12 @@
+require 'foodcritic'
 require 'rspec/core/rake_task'
 require 'chef/cookbook/metadata'
 
 task :default => [:foodcritic, :knife, :spec]
 
 desc "Run foodcritic"
-task :foodcritic do
-  sh "bundle exec foodcritic -f any ."
+FoodCritic::Rake::LintTask.new do |t|
+  t.options = { :fail_tags => ['any'] }
 end
 
 desc "Run knife test"

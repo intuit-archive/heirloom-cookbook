@@ -11,7 +11,6 @@ describe Archive do
         :cookbook_path => 'spec/support/cookbooks',
         :step_into     => ['heirloom_archive']
       )
-      #Chef::Log.level = :debug
       runner.converge 'heirloom-tests::default'
     }
     

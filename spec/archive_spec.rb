@@ -8,7 +8,7 @@ describe Archive do
   context "LWRP" do
     let(:chef_run) {
       runner = ChefSpec::ChefRunner.new(
-        :cookbook_path => 'spec/support/cookbooks',
+        :cookbook_path => 'vendor/cookbooks',
         :step_into     => ['heirloom_archive']
       )
       runner.converge 'heirloom-tests::default'

@@ -7,7 +7,7 @@ require 'berkshelf'
 FileUtils.rm_rf 'vendor/cookbooks/heirloom'
 # install deps
 berksfile = Berkshelf::Berksfile.from_file('Berksfile')
-berksfile.install( :path => 'vendor/cookbooks')
+berksfile.install(:path => 'vendor/cookbooks')
 
 libs = File.expand_path("../../libraries", __FILE__)
 

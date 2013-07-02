@@ -8,7 +8,7 @@ describe Archive do
   context "LWRP" do
     let(:chef_run) {
       runner = ChefSpec::ChefRunner.new(
-        :cookbook_path => 'vendor/cookbooks',
+        :cookbook_path => 'spec/sandbox',
         :step_into     => ['heirloom_archive']
       )
       runner.converge 'heirloom-tests::default'
@@ -21,7 +21,9 @@ describe Archive do
 
   context "package install" do
     let(:chef_run) {
-      runner = ChefSpec::ChefRunner.new
+      runner = ChefSpec::ChefRunner.new(
+        :cookbook_path => 'spec/sandbox'
+      )
       runner.node.set['heirloom']['version'] = 'v1.2.3'
       runner.converge 'heirloom'
     }

@@ -1,4 +1,4 @@
-# heirloom cookbook
+# heirloom cookbook [![Build Status](https://secure.travis-ci.org/intuit/heirloom-cookbook.png?branch=master)](http://travis-ci.org/intuit/heirloom-cookbook)
 
 Installs the heirloom pacakage manager RPM and provides an LWRP for downloading heirlooms.
 

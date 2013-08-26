@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'berkshelf'
+# https://github.com/RiotGames/berkshelf/issues/676
+gem 'json', '1.7.7'
+gem 'berkshelf', '~> 2.0.6'
 
 group :test do
   gem 'rspec'
@@ -8,8 +10,5 @@ group :test do
   gem 'chefspec'
   gem 'minitest-chef-handler'
   gem 'foodcritic'
-  gem 'chef', '= 10.16.2'
-  gem 'moneta', '= 0.6.0'
-  gem 'test-kitchen', '~> 1.0.0.alpha'
-  gem 'kitchen-vagrant'
+  gem 'chef', '= 11.4.4'
 end

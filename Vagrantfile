@@ -4,11 +4,10 @@ Vagrant.configure("2") do |config|
   config.berkshelf.enabled = true
   
   # $ vagrant plugin install vagrant-omnibus
-  config.omnibus.chef_version = "10.16.2"
+  config.omnibus.chef_version = "11.4.4"
 
   config.vm.box      = 'opscode-centos-6.4'
   config.vm.box_url  = 'https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_centos-6.4_provisionerless.box'
-  config.vm.hostname = 'cap-vagrant'
 
   config.vm.provision :shell do |shell|
     shell.inline = %q{
@@ -24,6 +23,6 @@ EOS
 
   config.vm.provision :chef_solo do |chef|
     chef.add_recipe "heirloom"
-    chef.add_recipe "minitest-handler-cookbook"
+    chef.add_recipe "minitest-handler"
   end
 end

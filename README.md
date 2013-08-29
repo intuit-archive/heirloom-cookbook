@@ -4,7 +4,7 @@ Installs the heirloom pacakage manager RPM and provides an LWRP for downloading 
 
 # Requirements
 
-Tested on Chef 10
+Tested on Chef 10 and 11
 
 # Usage
 

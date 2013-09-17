@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
 # https://github.com/RiotGames/berkshelf/issues/676
-gem 'json', '1.7.7'
 gem 'berkshelf', '~> 2.0.6'
+gem 'emeril', '~> 0.7.0'
+gem 'json', '1.7.7'
 
 group :test do
   gem 'rspec'

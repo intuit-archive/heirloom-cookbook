@@ -1,3 +1,6 @@
+## head:
+* remove command output from execute block in archive provider
+
 ## 0.2.1 (2013-09-18):
 * fix download command options
 

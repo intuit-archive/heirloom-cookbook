@@ -1,4 +1,4 @@
-## head:
+## 0.2.2 (2013-09-18):
 * remove command output from execute block in archive provider
 
 ## 0.2.1 (2013-09-18):

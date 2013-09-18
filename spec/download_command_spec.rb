@@ -1,7 +1,7 @@
 require File.expand_path("../", __FILE__) + '/spec_helper'
 
 describe DownloadCommand do
-  
+
   it "should recognize all arguments available to the CLI of Heirloom" do
     args = {
       :aws_access_key  => 'my-key',
@@ -21,11 +21,11 @@ describe DownloadCommand do
     }
 
     DownloadCommand.new.command(args)
-      .should == "heirloom download --aws_access_key my-key --aws_secret_key my-secret -b my-bucket-prefix -e testing -i v1.1.1 -l debug -m us-west-1 -n test -o /tmp/heirloom -r us-east-1 -s my-password --secret_file my-secret-file --use_iam_profile -x"
+      .should == "heirloom download --aws-access-key my-key --aws-secret-key my-secret -b my-bucket-prefix -e testing -i v1.1.1 -l debug -m us-west-1 -n test -o /tmp/heirloom -r us-east-1 -s my-password --secret-file my-secret-file --use-iam-profile -x"
   end
 
   it "should require the name and output arguments" do
-    
+
     expect {
       DownloadCommand.new.command
     }.to raise_error ArgumentError

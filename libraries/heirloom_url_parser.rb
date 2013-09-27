@@ -4,7 +4,8 @@ class HeirloomURLParser
     @uri = URI.parse object_uri
   end
 
-  def bucket
+  def bucket(region)
+    return strip_region(@uri.host,region) if region
     @uri.host
   end
 
@@ -19,5 +20,9 @@ class HeirloomURLParser
   private
   def path
     @uri.path.split("/")
+  end
+
+  def strip_region(bucket,region)
+    bucket.gsub("-#{region}","")
   end
 end

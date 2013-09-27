@@ -5,8 +5,8 @@ class HeirloomURLParser
   end
 
   def bucket(region)
-    return strip_region(@uri.host,region) if region
-    @uri.host
+    strip_region @uri.host,region
+
   end
 
   def id

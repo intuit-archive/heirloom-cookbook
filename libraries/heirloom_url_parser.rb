@@ -6,7 +6,6 @@ class HeirloomURLParser
 
   def bucket(region)
     strip_region @uri.host,region
-
   end
 
   def id

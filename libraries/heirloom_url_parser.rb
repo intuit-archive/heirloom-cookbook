@@ -4,24 +4,21 @@ class HeirloomURLParser
     @uri = URI.parse object_uri
   end
 
-  def bucket(region)
-    strip_region @uri.host,region
+  def bucket_prefix
+    @uri.host.gsub(/-[a-z]{2}-[a-z]{4,}-\d/, '')
   end
 
   def id
-    path[2].split(".")[0]
+    path[1]
   end
 
   def name
-    path[1]
+    path[0]
   end
 
   private
   def path
-    @uri.path.split("/")
+    @path ||= @uri.path.scan /[\w-]+/
   end
 
-  def strip_region(bucket,region)
-    bucket.gsub("-#{region}","")
-  end
 end

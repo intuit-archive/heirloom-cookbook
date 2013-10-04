@@ -1,3 +1,6 @@
+## 0.2.3 (2013-10-01):
+* added heirloom url parser library
+
 ## 0.2.2 (2013-09-18):
 * remove command output from execute block in archive provider
 

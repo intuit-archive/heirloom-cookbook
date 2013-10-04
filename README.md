@@ -38,4 +38,12 @@ All heirloom options are supported - for a full list consult the heirloom docume
 
 # Author
 
+## Libraries
+
+# heirloom_url_parser
+
+Used to convert the URI that is used with simple_deploy into a format that can be used by the Heirloom LWRP
+
+example..
+HeirloomURLParser.new('s3://bucket-prefix-us-southeast-1/lc/c89204.tar.gz')
 Author:: Intuit, Inc. (@brettweavnet)

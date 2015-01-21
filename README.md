@@ -1,5 +1,7 @@
 # heirloom cookbook [![Build Status](https://secure.travis-ci.org/intuit/heirloom-cookbook.png?branch=master)](http://travis-ci.org/intuit/heirloom-cookbook)
 
+**!!! This project has been deprecated. We recommend you fork it to your local repo if you continue to rely upon it !!!**
+
 Installs the heirloom pacakage manager RPM and provides an LWRP for downloading heirlooms.
 
 # Requirements
